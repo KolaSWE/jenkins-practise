@@ -11,11 +11,11 @@ pipeline{
             }
         }
 
-        stage('Tag Docker Image') {
-            steps {
-                sh 'docker tag flask-app:latest YOUR_DOCKERHUB_USERNAME/flask-app:latest'
-            }
-        }
+        // stage('Tag Docker Image') {
+        //     steps {
+        //         sh 'docker tag flask-app:latest YOUR_DOCKERHUB_USERNAME/flask-app:latest'
+        //     }
+        // }
 
         stage('push to Docker hub') {
             steps {
