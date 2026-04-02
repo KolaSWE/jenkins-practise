@@ -8,8 +8,8 @@ pipeline{
     stage('push') {
             steps {
                 sh "echo \$DOCKERHUB_CREDENTIALS_PSW | docker login -u \$DOCKERHUB_CREDENTIALS_USR --password-stdin"
-                sh "docker tag flask-app:latest kola/flask-app:latest"
-                sh "docker push kola/flask-app:latest"
+                sh "docker tag flask-app:latest rekz19/flask-app:latest"
+                sh "docker push rekz19/flask-app:latest"
             }
     }
 }
